@@ -1,0 +1,53 @@
+.navigation{
+
+    &__checkbox{
+        display: none;
+    }
+
+    &__button{
+        background-color: $color-grey-light;
+        height: 5rem;
+        width: 5rem;
+        position: fixed;
+        top: 5rem;
+        left: 5rem;
+        z-index: 100;
+        cursor: pointer;
+        border-radius: 50%;
+    }
+
+    &__icon{
+
+        position: relative;
+        background-color: black;
+        display: inline-block;
+        top: 2.4rem;
+        left: 1.2rem;
+    
+        &,
+        &::after,
+        &::before{
+            height: 2px;
+            width: 2.5rem;
+            background-color: black;
+        }
+
+        &::after,
+        &::before{
+            content: "";
+            position: absolute;
+            left:0;
+        }
+
+        &::after{
+            top: .6rem;
+        }
+
+        &::before{
+            top: -.6rem;
+        }
+    
+    }
+    
+}
+
