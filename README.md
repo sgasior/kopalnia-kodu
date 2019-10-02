@@ -1,0 +1,1 @@
+# kopalnia-kodu
