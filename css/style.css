@@ -1,6 +1,9 @@
 .u-margin-bottom-big {
   margin-bottom: 4rem !important; }
 
+.u-margin-bottom-md {
+  margin-bottom: 2rem !important; }
+
 *,
 *::after,
 *::before {
@@ -23,17 +26,58 @@ body {
 .heading-primary {
   color: #eeeeee;
   text-transform: uppercase;
-  margin-bottom: 4rem; }
+  margin-bottom: 10rem; }
   .heading-primary--main {
     display: block;
     font-size: 6rem;
     font-weight: 400;
-    letter-spacing: 1.3rem; }
+    letter-spacing: 1.3rem;
+    animation: bounceInLeft 1s ease-out; }
   .heading-primary--sub {
     display: block;
     font-size: 3rem;
     font-weight: 700;
-    letter-spacing: 1rem; }
+    letter-spacing: 1rem;
+    animation: bounceInRight 1s ease-out; }
+
+@keyframes bounceInLeft {
+  0% {
+    opacity: 0;
+    transform: translate(-12rem); }
+  60% {
+    transform: translateX(1rem); }
+  70% {
+    transform: translateX(-1rem); }
+  80% {
+    transform: translateX(1rem); }
+  100% {
+    opacity: 1;
+    transform: translate(0); } }
+
+@keyframes bounceInRight {
+  0% {
+    opacity: 0;
+    transform: translate(12rem); }
+  60% {
+    transform: translateX(-1rem); }
+  70% {
+    transform: translateX(1rem); }
+  80% {
+    transform: translateX(-1rem); }
+  100% {
+    opacity: 1;
+    transform: translate(0); } }
+
+@keyframes bounceIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.6); }
+  50% {
+    transform: scale(1.1); }
+  75% {
+    transform: scale(0.85); }
+  100% {
+    transform: scale(1); } }
 
 .btn, .btn:link,
 .btn .btn:visited {
@@ -41,18 +85,29 @@ body {
   text-decoration: none;
   text-transform: uppercase;
   display: inline-block;
-  padding: 1.5rem 3.5rem;
   padding: 1.5rem 3rem 1.5rem 6rem;
   border-radius: 10rem 4rem 4rem 10rem;
-  font-size: 1.6rem; }
+  font-size: 1.6rem;
+  transition: all .3s; }
 
 .btn--apply {
+  transform: rotateX(20deg);
   background-color: #ff6363;
-  position: relative; }
+  position: relative;
+  -webkit-box-shadow: 0px 10px 0px #ad2b2bab;
+  -moz-box-shadow: 0px 10px 0px #ad2b2bab;
+  box-shadow: 0px 10px 0px #ad2b2bab, 0px 0px 15px rgba(0, 0, 0, 0.8); }
+  .btn--apply:active {
+    transform: rotateX(0deg);
+    -webkit-box-shadow: 0px 0 0px transparent;
+    -moz-box-shadow: 0px 0 0px transparent;
+    box-shadow: 0px 0 0px transparent;
+    padding-top: 1.7rem;
+    padding-bottom: 1.7rem; }
   .btn--apply::before {
     position: absolute;
     left: .6rem;
-    top: .6rem;
+    top: .75rem;
     height: 4rem;
     width: 4rem;
     display: inline-block;
@@ -64,7 +119,12 @@ body {
     color: #525252;
     position: absolute;
     left: 1.3rem;
+    top: 1.45rem;
     font-size: 2.5rem; }
+
+.btn--animated {
+  animation: bounceIn .5s ease-out .75s;
+  animation-fill-mode: backwards; }
 
 .header {
   height: 100vh;

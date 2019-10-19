@@ -8,13 +8,15 @@ body{
 .heading-primary{
     color: $color-grey-light;
     text-transform: uppercase;
-    margin-bottom: 4rem;
+    margin-bottom: 10rem;
 
     &--main{
       display: block;
       font-size: 6rem;
       font-weight: 400;
       letter-spacing: 1.3rem;
+      animation: bounceInLeft 1s ease-out;
+
     }
 
     &--sub{
@@ -22,6 +24,7 @@ body{
         font-size: 3rem;
         font-weight: 700;
         letter-spacing: 1rem;
-    }
+        animation: bounceInRight 1s ease-out;
+    }   
 
 }
