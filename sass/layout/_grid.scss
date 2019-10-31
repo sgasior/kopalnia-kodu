@@ -19,35 +19,35 @@
 [class^="col-1-of-2"] {
 
     width: calc((100% - #{$grid-horizontal-space}) / 2);
-    @include setWidthOfColumnDependingOnActualScreenWidth;
+    //@include setWidthOfColumnDependingOnActualScreenWidth;
 }
 
 
 [class^="col-1-of-3"] {
     width: calc((100% - 2 * #{$grid-horizontal-space}) / 3);
-    @include setWidthOfColumnDependingOnActualScreenWidth;
+    //@include setWidthOfColumnDependingOnActualScreenWidth;
 }
 
 [class^="col-2-of-3"] {
     width: calc(2 * ((100% - 2 * #{$grid-horizontal-space}) / 3) + #{$grid-horizontal-space});
-    @include setWidthOfColumnDependingOnActualScreenWidth;
+    //@include setWidthOfColumnDependingOnActualScreenWidth;
 }
 
 [class^="col-1-of-4"] {
 
     width: calc((100% - 3 * #{$grid-horizontal-space}) / 4);
-    @include setWidthOfColumnDependingOnActualScreenWidth;
+    //@include setWidthOfColumnDependingOnActualScreenWidth;
 
 }
 
 [class^="col-2-of-4"] {
     width: calc(2 * ((100% - 3 * #{$grid-horizontal-space}) / 4) + #{$grid-horizontal-space});
-    @include setWidthOfColumnDependingOnActualScreenWidth;
+    //@include setWidthOfColumnDependingOnActualScreenWidth;
 }
 
 [class^="col-3-of-4"] {
     width: calc(3 * ((100% - 3 * #{$grid-horizontal-space}) / 4) + 2 * #{$grid-horizontal-space});
-    @include setWidthOfColumnDependingOnActualScreenWidth;
+    //@include setWidthOfColumnDependingOnActualScreenWidth;
 }
 
 

@@ -26,5 +26,52 @@ body{
         letter-spacing: 1rem;
         animation: bounceInRight 1s ease-out;
     }   
+}
 
+.heading-secondary{
+    font-size: 3.5rem;
+    color: $color-main-blue;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 700;
+    word-spacing: .3rem;
+    letter-spacing: .3rem;
+    background-image: linear-gradient(to right, 
+    $color-main-blue-light, 
+    $color-main-purple-light);
+    -webkit-background-clip: text;
+    color:transparent;
+    transition: all .25s;
+
+    &:hover{
+        -webkit-mask-image: linear-gradient(to right, rgba($color-main-blue,.8) 30%, $color-main-blue 50%, rgba($color-main-purple-light,.8) 70%);
+        -webkit-mask-size: 200%;
+        animation: shine 2s infinite;
+        transform: scale(1.05);
+    }
+    
+}
+
+.heading-tertiary{
+    color: $color-main-purple;
+    text-transform: uppercase;
+    font-size: 2rem;
+    text-align: center;
+    line-height: 2;
+    word-spacing: .2rem;
+    letter-spacing: .2rem;
+}
+
+.paragraph{
+    font-size: $default-font-size;
+    color: $color-grey-dark;
+    word-spacing: .2rem;
+    text-align: justify;
+
+}
+
+hr{
+    border:0;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba($color-main-purple-light, 0.75), rgba(0, 0, 0, 0));
 }

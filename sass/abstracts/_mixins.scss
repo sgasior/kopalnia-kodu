@@ -44,7 +44,6 @@ ORDER: Base + typography > general layout + grid > page layout > components
 
 
 @mixin setWidthOfColumnDependingOnActualScreenWidth{
-
     &[class*="-tabPort"]{
 
         @include respond(phone) {

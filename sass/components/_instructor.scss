@@ -1,0 +1,82 @@
+.instructor{
+    padding-bottom: 6rem;
+    padding-top:1.5rem;
+    border-bottom: 2px solid;
+    border-image-source: linear-gradient(0deg, rgba(0, 0, 0, 0), rgba($color-main-purple-light, 0.75),);
+
+    &--1{
+        border-left: 2px solid;
+        padding-left: 2rem;
+        border-image-source: linear-gradient(-45deg,rgba($color-main-purple-light, 0.75), rgba(0, 0, 0, 0));
+        border-image-slice: 1;
+    }
+
+
+    &--2{
+        border-right: 2px solid;
+        padding-right: 2rem;
+        border-image-source: linear-gradient(45deg,rgba($color-main-purple-light, 0.75), rgba(0, 0, 0, 0));
+        border-image-slice: 1;
+    }
+
+    &__shape{
+        width: 14rem;
+        height: 14rem;
+        border-radius: 50%;
+        margin-right: 3rem;
+        position: relative;
+        
+        @supports (clip-path: polygon(0 0)) or (-webkit-clip-path: polygon(0 0)) {
+            -webkit-clip-path: circle(50% at 50% 50%);
+            clip-path: circle(50% at 50% 50%);
+            -webkit-shape-outside: circle(50% at 50% 50%);
+            shape-outside: circle(50% at 50% 50%);
+            border-radius: none;
+        }
+
+        &--1{
+            float:left;
+            margin-right: 3rem;
+        }
+
+        &--2{
+            float:right;
+            margin-left: 5rem;
+        }
+        
+    }
+
+    &__img{
+        height: 100%;
+        width:100%;
+        transform: scale(1.2);
+        transition: all .5s;
+    }
+
+
+    &__caption{
+        font-size: 2rem;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        color: $color-white;
+        transition: all .5s;
+        opacity: 0;
+    }
+
+    &:hover &__img{
+        filter: blur(1px) brightness(80%);
+        transform: scale(1.05);
+    }
+
+    &:hover &__caption {
+        opacity: 1;
+        
+    }
+
+    &:hover{
+        box-shadow: 0 3rem 6rem rgba($color-black, .1);
+    } 
+}
