@@ -4,19 +4,28 @@
     border-bottom: 2px solid;
     border-image-source: linear-gradient(0deg, rgba(0, 0, 0, 0), rgba($color-main-purple-light, 0.75),);
 
-    &--1{
+    &:nth-of-type(odd){
         border-left: 2px solid;
         padding-left: 2rem;
         border-image-source: linear-gradient(-45deg,rgba($color-main-purple-light, 0.75), rgba(0, 0, 0, 0));
         border-image-slice: 1;
+
+        .instructor__shape{
+            float:left;
+            margin-right: 3rem;
+        }
     }
 
-
-    &--2{
+    &:nth-of-type(even){
         border-right: 2px solid;
         padding-right: 2rem;
         border-image-source: linear-gradient(45deg,rgba($color-main-purple-light, 0.75), rgba(0, 0, 0, 0));
         border-image-slice: 1;
+
+        .instructor__shape{
+            float:right;
+            margin-left: 5rem;
+        }
     }
 
     &__shape{
@@ -32,16 +41,6 @@
             -webkit-shape-outside: circle(50% at 50% 50%);
             shape-outside: circle(50% at 50% 50%);
             border-radius: none;
-        }
-
-        &--1{
-            float:left;
-            margin-right: 3rem;
-        }
-
-        &--2{
-            float:right;
-            margin-left: 5rem;
         }
         
     }

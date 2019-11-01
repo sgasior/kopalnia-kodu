@@ -208,16 +208,22 @@ hr {
   padding-top: 1.5rem;
   border-bottom: 2px solid;
   border-image-source: linear-gradient(0deg, rgba(0, 0, 0, 0), rgba(85, 60, 139, 0.75)); }
-  .instructor--1 {
+  .instructor:nth-of-type(odd) {
     border-left: 2px solid;
     padding-left: 2rem;
     border-image-source: linear-gradient(-45deg, rgba(85, 60, 139, 0.75), rgba(0, 0, 0, 0));
     border-image-slice: 1; }
-  .instructor--2 {
+    .instructor:nth-of-type(odd) .instructor__shape {
+      float: left;
+      margin-right: 3rem; }
+  .instructor:nth-of-type(even) {
     border-right: 2px solid;
     padding-right: 2rem;
     border-image-source: linear-gradient(45deg, rgba(85, 60, 139, 0.75), rgba(0, 0, 0, 0));
     border-image-slice: 1; }
+    .instructor:nth-of-type(even) .instructor__shape {
+      float: right;
+      margin-left: 5rem; }
   .instructor__shape {
     width: 14rem;
     height: 14rem;
@@ -231,12 +237,6 @@ hr {
         -webkit-shape-outside: circle(50% at 50% 50%);
         shape-outside: circle(50% at 50% 50%);
         border-radius: none; } }
-    .instructor__shape--1 {
-      float: left;
-      margin-right: 3rem; }
-    .instructor__shape--2 {
-      float: right;
-      margin-left: 5rem; }
   .instructor__img {
     height: 100%;
     width: 100%;
