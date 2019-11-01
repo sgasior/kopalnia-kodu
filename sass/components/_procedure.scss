@@ -1,0 +1,70 @@
+.procedure{
+    text-align: center;
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    transition: all .4s;
+    & ul{
+        list-style: none;
+    }
+
+    &__steps{
+        
+        & .fa-level-down-alt{
+            font-size: 5rem;
+            color: $color-main-purple;
+        }
+
+        & .fa-level-down-alt:nth-of-type(even){
+            display: block;
+            text-align: right;
+            position: relative;
+            left: 10%;
+            transform: rotateY(180deg);
+        }
+
+        & .fa-level-down-alt:nth-of-type(odd){
+            display: block;
+            text-align: center;
+            position: relative;
+        }
+    }
+
+    &__step{
+        
+        letter-spacing: .2rem;
+        color: $color-grey-dark;
+
+        &:first-child{
+            padding-top:2.5rem;
+        }
+
+        &:not(:last-child){
+            margin-bottom: 4.5rem;
+        }
+
+        &:not(:first-child){
+            margin-top: 4.5rem;
+        }
+        
+        &:nth-of-type(even){
+            text-align: center;
+            &:hover{
+                transform: skewY(-2deg) skewX(-10deg) scale(1.1);
+                text-shadow: .5rem 1rem 2rem rgba($color-main-purple, .2);    
+            }
+        }
+
+        &:nth-of-type(odd){
+            text-align: left;
+            &:hover{
+                transform: skewY(2deg) skewX(10deg) scale(1.1);
+                text-shadow: .5rem 1rem 2rem rgba($color-main-purple, .2);    
+            }
+        }
+
+    }
+
+ 
+}
+
+

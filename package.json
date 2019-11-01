@@ -1,0 +1,23 @@
+{
+  "name": "kopalniakodu",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "compile:sass": "node-sass sass/main.scss css/style.css -w",
+    "say-hello": "echo 'Hello World'"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sgasior/kopalnia-kodu.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sgasior/kopalnia-kodu/issues"
+  },
+  "homepage": "https://github.com/sgasior/kopalnia-kodu#readme",
+  "devDependencies": {
+    "node-sass": "^4.13.0"
+  }
+}
