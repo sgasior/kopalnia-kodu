@@ -1,5 +1,4 @@
 .section-technologies{
-    //padding: 35rem 0;
     padding: 35rem 0 35rem 0;
     margin-top: -25vh;
     background-color: $color-grey-light;
@@ -11,9 +10,38 @@
 
 }
 
-.section-test{
-    -webkit-clip-path: polygon(0 0, 30% 0,  100% 25vh,100% 100%,0% 100%);
-    clip-path: polygon(0 0, 30% 0,  100% 25vh,100% 100vh,0% 100%);
-    margin-top: -25vh;
-}
+// .section-test{
+//     -webkit-clip-path: polygon(0 0, 30% 0,  100% 25vh,100% 100%,0% 100%);
+//     clip-path: polygon(0 0, 30% 0,  100% 25vh,100% 100vh,0% 100%);
+//     margin-top: -25vh;
+// }
 
+
+.section-course{
+    background-image: linear-gradient(to left bottom, 
+    rgba($color-main-purple, 0.5), 
+    rgba($color-main-blue, 0.8)), url(../img/programming.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    
+    -webkit-clip-path: polygon(0 25vh, 100% 0,  100% 75%, 0% 100%);
+    clip-path: polygon(0 25vh, 100% 0,  100% 75%, 0% 100%);
+    margin-top: -25vh;
+    text-align: center;
+    position: relative;
+    text-align: center;
+
+
+    & .row:first-of-type{
+        & .feature-box:first-of-type{
+            margin-top: 35vh;
+        }
+    }
+
+    & .row:last-of-type{
+        & .feature-box:first-of-type{
+            margin-bottom: 35vh;
+        }
+    }
+        
+}

@@ -300,6 +300,31 @@ hr {
         transform: skewY(2deg) skewX(10deg) scale(1.1);
         text-shadow: 0.5rem 1rem 2rem rgba(96, 32, 128, 0.2); }
 
+.feature-box {
+  background-color: rgba(255, 255, 255, 0.75);
+  text-align: center;
+  padding: 2rem 2rem;
+  border-radius: 3px;
+  transition: transform .5s; }
+  .feature-box__icon {
+    font-size: 5rem;
+    color: #ad2b2bab; }
+  .feature-box__title {
+    background-image: linear-gradient(to right, #ff6363, #ad2b2bab);
+    -webkit-background-clip: text;
+    color: transparent; }
+  .feature-box__text {
+    padding-top: 2rem;
+    font-size: 1.6rem; }
+  .feature-box:first-child {
+    margin-left: 10%; }
+  .feature-box:last-child {
+    margin-right: 10%; }
+  .feature-box:hover {
+    transform: translateY(-1.5rem) scale(1.01); }
+  .feature-box:hover .feature-box__icon {
+    color: rgba(255, 99, 99, 0.6); }
+
 .row::after {
   content: "";
   display: table;
@@ -311,25 +336,25 @@ hr {
 [class^="col-"] {
   float: left; }
   [class^="col-"]:not(:last-child) {
-    margin-right: 6rem; }
+    margin-right: 1rem; }
 
 [class^="col-1-of-2"] {
-  width: calc((100% - 6rem) / 2); }
+  width: calc((100% - 1rem) / 2); }
 
 [class^="col-1-of-3"] {
-  width: calc((100% - 2 * 6rem) / 3); }
+  width: calc((100% - 2 * 1rem) / 3); }
 
 [class^="col-2-of-3"] {
-  width: calc(2 * ((100% - 2 * 6rem) / 3) + 6rem); }
+  width: calc(2 * ((100% - 2 * 1rem) / 3) + 1rem); }
 
 [class^="col-1-of-4"] {
-  width: calc((100% - 3 * 6rem) / 4); }
+  width: calc((100% - 3 * 1rem) / 4); }
 
 [class^="col-2-of-4"] {
-  width: calc(2 * ((100% - 3 * 6rem) / 4) + 6rem); }
+  width: calc(2 * ((100% - 3 * 1rem) / 4) + 1rem); }
 
 [class^="col-3-of-4"] {
-  width: calc(3 * ((100% - 3 * 6rem) / 4) + 2 * 6rem); }
+  width: calc(3 * ((100% - 3 * 1rem) / 4) + 2 * 1rem); }
 
 .header {
   height: 100vh;
@@ -387,7 +412,17 @@ hr {
     margin-left: 10%;
     margin-right: 10%; }
 
-.section-test {
-  -webkit-clip-path: polygon(0 0, 30% 0, 100% 25vh, 100% 100%, 0% 100%);
-  clip-path: polygon(0 0, 30% 0, 100% 25vh, 100% 100vh, 0% 100%);
-  margin-top: -25vh; }
+.section-course {
+  background-image: linear-gradient(to left bottom, rgba(96, 32, 128, 0.5), rgba(32, 32, 96, 0.8)), url(../img/programming.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+  -webkit-clip-path: polygon(0 25vh, 100% 0, 100% 75%, 0% 100%);
+  clip-path: polygon(0 25vh, 100% 0, 100% 75%, 0% 100%);
+  margin-top: -25vh;
+  text-align: center;
+  position: relative;
+  text-align: center; }
+  .section-course .row:first-of-type .feature-box:first-of-type {
+    margin-top: 35vh; }
+  .section-course .row:last-of-type .feature-box:first-of-type {
+    margin-bottom: 35vh; }

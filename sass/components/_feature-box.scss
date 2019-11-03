@@ -1,0 +1,42 @@
+.feature-box{
+    background-color: rgba($color-white, .75);
+    text-align: center;
+    padding: 2rem 2rem;
+    border-radius: 3px;
+    transition: transform .5s;
+
+    &__icon{
+        font-size: 5rem;
+        color: $color-orange-dark;
+    }
+
+    &__title{
+        background-image: linear-gradient(to right, 
+        $color-orange, 
+        $color-orange-dark);
+        -webkit-background-clip: text;
+        color:transparent;
+    }
+
+    &__text{
+        padding-top: 2rem;
+        font-size: $default-font-size;
+    }
+    &:first-child{
+        margin-left: 10%;
+    }
+
+    &:last-child{
+        margin-right: 10%;
+    }
+
+    &:hover{
+        transform: translateY(-1.5rem) scale(1.01);
+    }
+
+    &:hover &__icon{
+        color: rgba($color-orange,.6);
+    }
+
+}
+
